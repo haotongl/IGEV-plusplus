@@ -119,7 +119,8 @@ class BasicUpdateBlock(nn.Module):
         self.encoder = BasicMotionEncoder(args)
         encoder_output_dim = hidden_dim
 
-        self.gru = ConvGRU(hidden_dim, hidden_dim)
+        input_dim = 96
+        self.gru = ConvGRU(hidden_dim, input_dim)
         self.disp_head = DispHead(hidden_dim, hidden_dim=128, output_dim=1)
         factor = 2**self.args.n_downsample
 
