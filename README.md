@@ -11,7 +11,8 @@ PCWNet is a volume filtering-based method, DLNR is an iterative optimization-bas
 The IGEV++ first builds Multi-range Geometry Encoding Volumes (MGEV) via Adaptive Patch Matching (APM). MEGV encodes coarse-grained geometry information of the scene for textureless regions and large disparities and fine-grained geometry information for details and small disparities after 3D aggregation or regularization. Then we regress an initial disparity map from MGEV through soft argmin, which serves as the starting point for ConvGRUs. In each iteration, we index multi-range and multi-granularity geometry features from MGEV, selectively fuse them, and then input them into ConvGRUs to update the disparity field.
 
 ## 📢 News
-2024-12-30: We add bfloat16 training to prevent potential NAN issues during the training process.<br>
+2025-04-29: Our IGEV++ is accepted by TPAMI.<br>
+2024-12-30: We add bfloat16 training to prevent potential NAN issues during the float16 training process.<br>
 
 ## Comparisons with SOTA methods
 <img src="figures/teaser_v2.png" width="90%">
