@@ -80,7 +80,7 @@ or
 python evaluate_stereo.py --restore_ckpt ./pretrained_models/igev_plusplus/sceneflow.pth --dataset middlebury_H
 ```
 
-To evaluate RT-IGEV++ (real-time version) on Scene Flow, run
+To evaluate RT-IGEV (real-time version) on Scene Flow, run
 
 ```Shell
 python evaluate_stereo_rt.py --dataset sceneflow --restore_ckpt ./pretrained_models/igev_rt/sceneflow.pth
@@ -136,7 +136,7 @@ For IGEV++ submission to the KITTI benchmark, run
 python save_disp.py
 ```
 
-For RT-IGEV++ submission to the KITTI benchmark, run
+For RT-IGEV submission to the KITTI benchmark, run
 ```Shell
 python save_disp_rt.py
 ```
@@ -147,11 +147,12 @@ If you find our works useful in your research, please consider citing our papers
 
 ```bibtex
 
-@article{xu2024igev++,
-  title={IGEV++: Iterative Multi-range Geometry Encoding Volumes for Stereo Matching},
+@article{xu2025igev++,
+  title={Igev++: Iterative multi-range geometry encoding volumes for stereo matching},
   author={Xu, Gangwei and Wang, Xianqi and Zhang, Zhaoxing and Cheng, Junda and Liao, Chunyuan and Yang, Xin},
-  journal={arXiv preprint arXiv:2409.00638},
-  year={2024}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2025},
+  publisher={IEEE}
 }
 
 @inproceedings{xu2023iterative,
