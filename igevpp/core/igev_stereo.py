@@ -1,10 +1,10 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from core.update import BasicMultiUpdateBlock
-from core.extractor import MultiBasicEncoder, Feature
-from core.geometry import Combined_Geo_Encoding_Volume
-from core.submodule import *
+from igevpp.core.update import BasicMultiUpdateBlock
+from igevpp.core.extractor import MultiBasicEncoder, Feature
+from igevpp.core.geometry import Combined_Geo_Encoding_Volume
+from igevpp.core.submodule import *
 import time
 
 
@@ -161,8 +161,8 @@ class IGEVStereo(nn.Module):
     def forward(self, image1, image2, iters=12, test_mode=False):
         """ Estimate disparity between pair of frames """
 
-        image1 = (2 * (image1 / 255.0) - 1.0).contiguous()
-        image2 = (2 * (image2 / 255.0) - 1.0).contiguous()
+        image1 = (2 * (image1) - 1.0).contiguous()
+        image2 = (2 * (image2) - 1.0).contiguous()
         with autocast(enabled=self.args.mixed_precision, dtype=getattr(torch, self.args.precision_dtype, torch.float16)):
             features_left = self.feature(image1)
             features_right = self.feature(image2)

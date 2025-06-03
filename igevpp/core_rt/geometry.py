@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from core_rt.utils.utils import bilinear_sampler
+from igevpp.core_rt.utils.utils import bilinear_sampler
 
 
 class Geo_Encoding_Volume:

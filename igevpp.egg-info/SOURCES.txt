@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+igevpp.egg-info/PKG-INFO
+igevpp.egg-info/SOURCES.txt
+igevpp.egg-info/dependency_links.txt
+igevpp.egg-info/top_level.txt

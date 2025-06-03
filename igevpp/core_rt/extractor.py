@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from core_rt.submodule import *
+from igevpp.core_rt.submodule import *
 import timm
 
 
